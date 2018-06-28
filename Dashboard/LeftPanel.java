@@ -85,8 +85,7 @@ public class LeftPanel extends Panel {
                  .setWidth(200)
                  .addItem(g1)
                  .addItem(g2)
-                 .addItem(g3)
-                 ;
+                 .addItem(g3);
                  
   cp5.mapKeyFor(new ControlKey() {public void keyEvent() {accordion.open(0,1,2);}}, 'o');
   cp5.mapKeyFor(new ControlKey() {public void keyEvent() {accordion.close(0,1,2);}}, 'c');
@@ -107,18 +106,7 @@ public class LeftPanel extends Panel {
   // accordion.setCollapseMode(Accordion.SINGLE);
 }
 
-void draw() {
-  //background(220);
-  
-  //color c = parent.color(0, 160, 100);
-  parent.fill(parent.color(0, 160, 100));
-  
-  float s1 = cp5.getController("hello").getValue();
-  parent.ellipse(350,400,s1,s1);
-  
-  float s2 = cp5.getController("world").getValue();
-  parent.ellipse(400,100,s2,s2);
-}
+void draw() {}
 
 
 
@@ -128,6 +116,10 @@ private void shuffle() {
 
 public void notifyChangeInTheOtherPanel() {
   
+}
+
+public ControlP5 getCp5(){
+  return cp5;
 }
 
 }

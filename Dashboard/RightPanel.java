@@ -39,8 +39,19 @@ public void handleToggleButtonEvents(GImageToggleButton button, GEvent event) {
     case(16):parent.background(50,128);break;
   }
 }
+
+void draw() {
+   parent.fill(parent.color(0, 160, 100)); 
+  
+  float s1 = parent.getLeftPanelHelloRadioButtonValue("hello");
+  
+  parent.ellipse(350,400,s1,s1);
+  
+  float s2 = parent.getLeftPanelHelloRadioButtonValue("world");
+  parent.ellipse(400,100,s2,s2);
+}
   
   public void notifyChangeInTheOtherPanel() {
-  
+    
   }
 }

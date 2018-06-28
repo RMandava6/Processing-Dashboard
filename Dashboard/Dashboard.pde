@@ -18,18 +18,20 @@ void setup() {
   smooth();
   buildGui();
   
-  G4P.setGlobalColorScheme(GCScheme.ORANGE_SCHEME);
-  G4P.setCursor(ARROW);
-  
 }
 
 void buildGui() {
+  G4P.setGlobalColorScheme(GCScheme.ORANGE_SCHEME);
+  G4P.setCursor(ARROW);
   leftPanel.buildGui();
 }
   
-
-
-
 void draw() {
   leftPanel.draw();
+  rightPanel.draw();
+}
+
+
+public float getLeftPanelHelloRadioButtonValue(String radioButtonName) {
+  return leftPanel.getCp5().getController(radioButtonName).getValue();
 }
